@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secure Password Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Secure Password Assistant</h1>
+    <p>Check your password strength and get suggestions for improvement</p>
+
+    <input type="password" id="password" placeholder="Enter your password">
+    <button onclick="checkPassword()">Check Strength</button>
+
+    <div id="result-container">
+        <p id="result"></p>
+        <div id="bar"></div>
+    </div>
+
+    <ul id="feedback"></ul>
+
+    <div id="suggestion">
+        <h3>Suggested Strong Password:</h3>
+        <p id="strong-pass"></p>
+        <button onclick="generateAndShow()">Generate New Password</button>
+    </div>
+</div>
+
+<!-- Include CryptoJS for hashing -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
